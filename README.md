@@ -68,7 +68,7 @@ Then add the following dependency:
 
 ```xml
 <dependency>
-	<groupId>com.activiti.sdk</groupId>
+	<groupId>com.github.OpenPj.fluent-aps</groupId>
 	<artifactId>aps-fluent-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 </dependency>
