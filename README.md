@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/OpenPj/fluent-aps.svg)](https://jitpack.io/#OpenPj/fluent-aps)
+
 # Fluent APS 0.0.1-SNAPSHOT
 
 Fluent APS is a Fluent API for Alfresco Process Services.
