@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.activiti.sdk</groupId>
+	<artifactId>aps-fluent-api-root</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Alfresco Process Services Fluent API</name>
+
+	<developers>
+		<developer>
+			<name>Piergiorgio Lucidi</name>
+			<email>plucidi@ziaconsulting.com</email>
+			<organization>Zia Consulting</organization>
+			<organizationUrl>https://www.ziaconsulting.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Bindu Wavell</name>
+			<email>bindu@ziaconsulting.com</email>
+			<organization>Zia Consulting</organization>
+			<organizationUrl>https://www.ziaconsulting.com</organizationUrl>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		<!-- Maven plugins -->
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+		<maven-failsafe-plugin.version>3.0.0-M7</maven-failsafe-plugin.version>
+		<maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
+		<maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
+		<docker-maven-plugin.version>0.40.2</docker-maven-plugin.version>
+		
+		<!-- Dependencies -->
+		<spring-boot.version>2.7.4</spring-boot.version>
+		<aps.version>v2.3.4</aps.version>
+		<httpclient5.version>5.1.3</httpclient5.version>
+		<log4j.version>2.19.0</log4j.version>
+		
+		
+		<!-- Docker settings for integration tests -->
+		<docker.aps.image>alfresco/process-services:2.3.4</docker.aps.image>
+	    <docker.database.image>postgres:13.1</docker.database.image>
+	    <docker.elasticsearch.image>elasticsearch:7.17.6</docker.elasticsearch.image>
+	</properties>
+
+	<modules>
+		<module>api</module>
+		<module>docker</module>
+		<module>integration-tests</module>
+	</modules>
+
+</project>
