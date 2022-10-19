@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN" name="APS Fluent API" packages="com.activiti.sdk.fluent.api">
+<Configuration status="WARN" name="APS Fluent API" packages="com.activiti.aps.fluent">
   <Appenders>
     <Console name="Console" target="SYSTEM_OUT">
       <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>

@@ -1,4 +1,4 @@
-/license
+/license/activiti.lic
 ######################
 # Project Specific
 ######################
@@ -139,5 +139,3 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
-/keycloak-assembly/target
-/keycloak-theme/target
