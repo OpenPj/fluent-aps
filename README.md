@@ -1,6 +1,6 @@
-# APS Fluent API 0.0.1-SNAPSHOT
+# Fluent APS 0.0.1-SNAPSHOT
 
-APS Fluent API is a Fluent API for Alfresco Process Services.
+Fluent APS is a Fluent API for Alfresco Process Services.
 This project consists of the following Maven modules:
 
  * APS Fluent API JAR (`api`): this is the client API implementation based on the [`aps-2x-client`](https://github.com/OpenPj/aps-2x-client)
