@@ -89,6 +89,7 @@
 					</argLine>
 					<includes>
 						<include>**/FourEyesAppAPSTesterIT.java</include>
+						<include>**/ExportAppIT.java</include>
 					</includes>
 				</configuration>
 				<executions>

@@ -48,9 +48,8 @@ public class FluentAps {
 	TaskClient taskUtils;
 
 	protected AppDefinitionRepresentation currentAppDef = null;
-	
-	private static final Logger logger = LogManager.getLogger(FluentAps.class);
 
+	private static final Logger logger = LogManager.getLogger(FluentAps.class);
 
 	public FluentAps(FluentApsBuilder builder) {
 		this.username = builder.username;
@@ -67,6 +66,7 @@ public class FluentAps {
 		aboutApi = new AboutApi(apiClient);
 		appDefinitionsApi = new AppDefinitionsApi(apiClient);
 		runtimeAppDefinitionsApi = new RuntimeAppDefinitionsApi(apiClient);
+		runtimeAppDeploymentsApi = new RuntimeAppDeploymentsApi(apiClient);
 		processDefinitionsApi = new ProcessDefinitionsApi(apiClient);
 		processInstancesApi = new ProcessInstancesApi(apiClient);
 		tasksApi = new TasksApi(apiClient);
@@ -87,21 +87,20 @@ public class FluentAps {
 		appUtils.removeApp(currentAppDef);
 		return this;
 	}
-	
+
 	public ProcessApi startProcessForApp(String appName) {
 		// TODO: fail() if app name does not exist.
 		return new ProcessApi(this, appName);
 	}
 
 	void thenSubmitTask(TaskApi task) {
-		/* Not needed, required arguments moved to constructor
-		if (StringUtils.isEmpty(task.getName())) {
-			fail("Cannot submit task with no name: " + task);
-		}
-		if (StringUtils.isEmpty(task.getOutcome())) {
-			fail("Cannot submit task with no outcome: " + task);
-		}
-		*/
+		/*
+		 * Not needed, required arguments moved to constructor if
+		 * (StringUtils.isEmpty(task.getName())) {
+		 * fail("Cannot submit task with no name: " + task); } if
+		 * (StringUtils.isEmpty(task.getOutcome())) {
+		 * fail("Cannot submit task with no outcome: " + task); }
+		 */
 
 		// TODO: check that all required form fields have been provided.
 
@@ -119,14 +118,17 @@ public class FluentAps {
 		taskUtils.completeTask(task, currentTask.get().getId());
 	}
 
-
-	/*
-	public APSTester reset() {
-		currentProcessInstance = null;
-		currentAppDefId = null;
+	public FluentAps exportAppNamed(String appName, String appZipFile) {
+		currentAppDef = appUtils.getAppDef(appName);
+		String deploymentId = currentAppDef.getDeploymentId();
+		appUtils.exportApp(deploymentId, appZipFile, username, password, proto, host, port);
 		return this;
 	}
-	*/
+
+	/*
+	 * public APSTester reset() { currentProcessInstance = null; currentAppDefId =
+	 * null; return this; }
+	 */
 
 	public static class FluentApsBuilder {
 

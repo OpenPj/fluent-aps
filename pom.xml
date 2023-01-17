@@ -39,14 +39,14 @@
 		<maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
 		
 		<!-- Dependencies -->
-		<spring-boot.version>2.7.4</spring-boot.version>
-		<aps.version>v2.3.4</aps.version>
-		<httpclient5.version>5.1.3</httpclient5.version>
+		<spring-boot.version>2.7.7</spring-boot.version>
+		<aps.version>v2.3.0</aps.version>
+		<httpclient5.version>5.2.1</httpclient5.version>
 		<log4j.version>2.19.0</log4j.version>
 		
 		
 		<!-- Docker settings for integration tests -->
-		<docker.aps.image>alfresco/process-services:2.3.4</docker.aps.image>
+		<docker.aps.image>alfresco/process-services:2.3.0</docker.aps.image>
 	    <docker.database.image>postgres:13.1</docker.database.image>
 	    <docker.elasticsearch.image>elasticsearch:7.17.6</docker.elasticsearch.image>
 	</properties>

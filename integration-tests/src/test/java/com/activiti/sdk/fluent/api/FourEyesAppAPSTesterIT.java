@@ -37,8 +37,7 @@ public class FourEyesAppAPSTesterIT {
 			.withFormValue("reviewtitle", "Review from APS SDK")
 			.withFormValue("description", "Description from APS SDK")
 			.thenCheckThatTheProcessIsFinished();
-
+		
 		System.out.println("--- /End - Four Eyes App - Integration Test ---");
-
 	}
 }
